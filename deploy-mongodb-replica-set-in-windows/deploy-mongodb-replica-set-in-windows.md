@@ -1,4 +1,8 @@
-# Steps
+# Deploy MongoDB Replica Set in Windows
+In this page I am describing the steps to deploy MongoDB Replica Set in Windows.
+## Versions:
+- MongoDB 6.0.2
+## Steps
 1. **Install MongoDB**: install with network service option and follow the default options during installation.
 2. **Create data folders for database instances**: create 3 different folders for three members of the cluster, like the following:
 - path: `C:\Program Files\MongoDB\Server\6.0\rs0` containing the following directories and files:
@@ -79,7 +83,7 @@ or if it is already instantiated, then run the following command:
 ```javascript
 rs.reconfig(cfg);
 ```
-if you get `ok: 1`, it means everything is correct and the replica set is created and you can connect to the replica set via Compass with the following connection string:
+if you get `ok: 1`, it means everything is correct and the replica set has been created successfully, and you can connect to the replica set via Compass with the following connection string:
 ```
 mongodb://localhost:37017,localhost:37018,localhost:37019/?replicaSet=rs0
 ```
