@@ -36,10 +36,13 @@ mongod --config "C:\Program Files\MongoDB\Server\6.0\rs0\instance2\mongod.cfg" -
 net start MongoDB
 ```
 7. **Start Service**: start MongoDB service for this replica set by running the following command:
-```
+```sh
 mongod.exe --config "C:\Program Files\MongoDB\Server\6.0\rs0\instance0\mongod.cfg"
 ```
-Hint: We should start this service when the computer is starting. We are not able to connect to the replica set without running one of the replica set services.
+Hint: We should start this service when the computer is starting. 
+We are not able to connect to the replica set without running one of the replica set services.
+For some cases we need to open the command shell as Administrator to execute the command.
+
 8. **Start MongoShell**: run the following command:
 ```sh
 mongosh  mongodb://127.0.0.1:37017/?replicaSet=rs0"&"directConnection=true
